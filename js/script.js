@@ -32,4 +32,10 @@ function checkSelection(event) {
     }
 }
 
-  
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    // Toggle a class that shows/hides the nav links on mobile
+    navLinks.classList.toggle('active');
+  });

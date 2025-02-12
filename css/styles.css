@@ -105,47 +105,97 @@
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   }
   
-  /* NAVIGATION */
-  nav {
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Spread out the elements */
-    padding: 10px 20px;
-  }
-  
-  .language-toggle {
-    /* Additional styling for the language toggle, if needed */
-  }
-  
-  /* Container for navigation links */
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    max-width: 800px; /* Limit width on larger screens */
-    width: 100%;
-    margin: 0 auto;   /* Center the container */
-  }
-  
-  nav a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #6b8e23;
-    font-size: 1em;
-    margin: 0 15px;
-  }
-  
-  nav a:hover {
-    color: #8fbc8f;
-  }
-  
+/* NAVIGATION BASE */
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  /* For the flex layout in larger screens, you can keep or adjust */
+  display: flex;
+  flex-direction: column;
+}
 
-nav a:hover {
-    color: #8fbc8f;
+/* Nav header container to hold logo and hamburger on one line */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo styling (adjust or remove as desired) */
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #6b8e23;
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.3s ease; /* Smooth expand/collapse transition if desired */
+}
+
+/* Individual link styles */
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #6b8e23;
+  font-size: 1em;
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #8fbc8f;
+}
+
+/* HAMBURGER STYLES: hidden by default on large screens */
+.hamburger {
+  display: none; /* Show it only on mobile via media query */
+  flex-direction: column;
+  cursor: pointer;
+  /* Adjust size/spacing as needed */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #6b8e23;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* MEDIA QUERY for mobile / small screens */
+@media (max-width: 768px) {
+  /* Show the hamburger, hide the full nav by default */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Initially hide the nav-links on mobile */
+  .nav-links {
+    display: none;            /* hidden by default */
+    flex-direction: column;   /* vertical layout when shown */
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;         /* small gap below the nav-header */
+  }
+
+  /* When .active is added by JS, show the nav-links */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Adjust link spacing if needed for vertical layout */
+  .nav-links a {
+    margin: 10px 0;
+  }
 }
   
   /* MAIN CONTENT */
