@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex and Neil</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/green.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/green.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;400;700&display=swap"
+  rel="stylesheet"
+  />
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Auth overlay (covers the page until user confirms they're human) -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <h2>Confirm Your Identity</h2>
+      <form onsubmit="checkSelection(event)">
+        <label>
+          <input 
+            type="radio" 
+            name="auth-selection" 
+            value="robot" 
+            checked 
+          />
+          I am a robot | Robot vagyok
+        </label>
+        <br />
+        <label>
+          <input 
+            type="radio" 
+            name="auth-selection" 
+            value="human" 
+          />
+          I am a human | Nem vagyok robot
+        </label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <header>
+    
+    <h1 class="english">Alex and Neil</h1>
+    <h1 class="hungarian">Alex/Szandra és Neil</h1>
+    <p class="english">Join us for our special day on May 4th</p>
+    <p class="hungarian">Ünnepelj velünk a nagy napunkon, május 4-én!</p>
+  </header>
+
+  <nav>
+    <div class="language-toggle">
+      <img
+        src="https://flagicons.lipis.dev/flags/4x3/gb.svg"
+        alt="English"
+        onclick="toggleLanguage('english')"
+      />
+      <img
+        src="https://flagicons.lipis.dev/flags/4x3/hu.svg"
+        alt="Hungarian"
+        onclick="toggleLanguage('hungarian')"
+      />
+    </div>
+    <div class="nav-links">
+      <a href="#rsvp">RSVP</a>   
+      <a href="#day-info">Wedding Day Information</a>
+      <!--
+      <a href="#places-to-stay">Places to Stay</a>
+      <a href="#things-to-do">Things to Do</a>
+      -->
+      <a href="#travel">Travel</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#transport">Bus Transport</a>
+    </div>
+  </nav>
+
+  <main>
+    
+    <section id="rsvp">
+      <h2 class="english">RSVP &#128236;</h2>
+      <h2 class="hungarian">Visszajelzés &#128236;</h2>
+      <p class="english">
+        Please RSVP by 1st of March.
+        <a href="https://docs.google.com/forms/d/15D6E_mjSSEM1o2Dg6QiuBE0tNJSNJwQEJITTJyvTkyI" target="_blank">
+          Please click here to respond.
+        </a>
+      </p>
+      <p class="hungarian">
+        Válaszodat március 1-ig izgatottan várjuk.
+        <a href="https://docs.google.com/forms/d/15D6E_mjSSEM1o2Dg6QiuBE0tNJSNJwQEJITTJyvTkyI" target="_blank">
+          Kattints ide a válaszadáshoz.
+        </a>
+      </p>
+    </section>
+
+    <section id="day-info">
+      <h2 class="english">Wedding Day Information &#129395;</h2>
+      <h2 class="hungarian">Hasznos infomaciók az esküvői napján &#129395;</h2>
+      <p class="english">
+        Our wedding will take place at Sorg Villa, located at Leányfalu, Móricz Zsigmond út 113, 2016 Hungary.
+        <p class="english"><u>Timings of events, including bus transport, will be confirmed nearer the time, so please check back here before the wedding for an itinerary</u></p>
+      </p>
+      <p class="hungarian">
+        Az esküvőnket a Sorg Villában tartjuk, 2016, Leányfalu, Móricz Zsigmond út 113.
+        <p class="hungarian"><u>Az esküvő menetét (beleértve a transzfer buszok közlekedésének pontos időpontjait) az esküvő dátumához közeledve pontosítjuk, ezért kérjük, látogass ide vissza később a részletes programért.</u></p>
+      </p>
+    </section>
+
+<!-- 
+eAsTeR eGg
+Pippin: But what about language?
+Aragorn: You've already had it.
+Pippin: We've had one, yes. But what about second language?
+-->
+
+    <section id="travel">
+      <h2 class="english">Travel Considerations &#128747;</h2>
+      <p class="english">
+        People flying from the UK may need to request a travel visa to enter EU airports(thanks Brexit), but at the time of writing, it's only being introduced "sometime in 2025". So please keep an eye on this for up-to-date information: <a href=https://travel-europe.europa.eu/etias_en>EU EITAS status</a>
+      </p>
+    </section>
+
+    <section id="gifts">
+      <h2 class="english">Gifts &#127873;</h2>
+      <h2 class="hungarian">Nászajándék &#127873;</h2>
+      <p class="english">
+        We truly appreciate you making the journey to celebrate with us, with many of you traveling from different countries, so we don't expect anything in the way of gifts – your attendance is enough of a gift for us!
+      </p>
+      <p class="english">
+        If you are positively desperate to give a gift, we could be persuaded to accept donations to our 
+        <a href="https://app.collectionpot.com/pot/alex-and-neil" target="_blank">honeymoon fund</a> &#128521;.
+      </p>
+      <p class="hungarian">
+        Hatalmas köszönet, hogy velünk ünnepeltek a nagy napunkon, nagyon sokan hosszú utat tesztek meg - ez már önmagában a legnagyobb ajándék számunkra!
+      </p>
+      <p class="hungarian">
+        Ha azonban mégis ragaszkodnátok az ajándékozáshoz, szívesen fogadunk felajánlásokat amit a közelgő nászutunkra fordítunk.
+        <a href="https://app.collectionpot.com/pot/alex-and-neil" target="_blank">Ezen a linken</a> &#128521;.
+      </p>
+      <p class="hungarian">
+        Ha nem szeretnétek az online fizetéssel bajlódni, az esküvő napján lesz egy gyűjtődoboz borítékok és esküvői üdvözlőkártyák számára!
+      </p>
+    </section>
+
+    <section id="transport">
+      <h2 class="english">Bus Transport &#128652;</h2>
+      <h2 class="hungarian">Busz transzfer &#128652;</h2>
+      <p class="english">
+        The bus transport will pick up from both locations in the afternoon, and drop-off at both locations at night.
+      </p>
+      <p class="hungarian">
+        Délután, az esküvő előtt - és ugyanígy éjszaka, az esküvő után is - a busz mindkét ponton megáll Budapesten.
+      </p>
+      <!-- First Location -->
+      <h3 class="english">Pickup/drop-off spot #1</h3>
+      <h3 class="hungarian">Felszállási/leszállási pont #1</h3>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.1547713627!2d19.038211800000003!3d47.50637700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc1a2828bfcd%3A0x23a4ff47f14b46f2!2sBudapest%2C%20Batthy%C3%A1ny%20t%C3%A9r%2C%201011%20Hungary!5e0!3m2!1sen!2suk!4v1738530775420!5m2!1sen!2suk" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    
+      <!-- Second Location -->
+      <h3 class="english">Pickup/drop-off spot #2</h3>
+      <h3 class="hungarian">Felszállási/leszállási pont #2</h3>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6710794892065!2d19.069613099999998!3d47.4963207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc6767b07d9b%3A0x7be2e24544320049!2sBudapest%2C%20Blaha%20Lujza%20t%C3%A9r%2C%201085%20Hungary!5e0!3m2!1sen!2suk!4v1738530795436!5m2!1sen!2suk" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- External JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
