@@ -7,7 +7,6 @@
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     /* Fallback color + background image covering the whole viewport */
     background: #eee url('../images/sorg-villa-eskuvo-15.jpg') center/cover no-repeat fixed;
     font-family: 'Raleway', sans-serif; /* Body text uses Raleway */
