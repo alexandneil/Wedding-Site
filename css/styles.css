@@ -253,3 +253,8 @@ nav {
     border: 0;
   }
   
+  .qr {
+    width: 100%;
+    height: auto;   /* keeps aspect ratio */
+  }
+  
